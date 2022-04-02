@@ -3,9 +3,11 @@ package pl.pjait;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Main 
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Product product = new Product();
         product.setCode("12344");
         product.setDiscountPrice(0.0);
