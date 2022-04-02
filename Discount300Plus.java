@@ -7,7 +7,6 @@ public class Discount300Plus implements ICanCalculateSpecialOffer{
     public boolean canCalculate(Cart cart) {
         CartService cartService = new CartService();
         return cartService.getSumOfCart(cart) > 300;
-//        return cart.getTotalPrice() > 300;
     }
 
     @Override
