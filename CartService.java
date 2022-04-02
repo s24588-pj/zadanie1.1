@@ -2,6 +2,8 @@ package pl.pjait;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Comparator;
+import java.util.stream.Collectors;
 
 public class CartService {
 
@@ -27,14 +29,16 @@ public class CartService {
         return temporaryProduct;
     }
 
-    //    public Product[] sortProductsByName(Product[] products) {
-//
-//    }
-//
-//    public Product[] sortProductsByPrice(Product[] products) {
-//
-//    }
-//
+    public List<Product> sortProductsByName(List<Product> products) {
+        return products.stream().sorted(Comparator.comparing(Product::getName))
+                .collect(Collectors.toList());
+    }
+
+    public List<Product> sortProductsByPrice(List<Product> products) {
+        return products.stream().sorted(Comparator.comparing(Product::getPrice))
+                .collect(Collectors.toList());
+    }
+
     public double getSumOfCart(Cart cart) {
         double totalPrice = 0;
         for (Product product : cart.getProducts()) {
