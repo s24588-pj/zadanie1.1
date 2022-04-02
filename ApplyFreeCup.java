@@ -1,4 +1,3 @@
-
 package pl.pjait;
 
 public class ApplyFreeCup implements ICanCalculateSpecialOffer{
