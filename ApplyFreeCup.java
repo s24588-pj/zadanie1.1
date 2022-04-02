@@ -1,15 +1,18 @@
 package pl.pjait;
 
-public class ApplyFreeCup implements ICanCalculateSpecialOffer{
+public class ApplyFreeCup implements ICanCalculateSpecialOffer
+{
 
     @Override
-    public boolean canCalculate(Cart cart) {
+    public boolean canCalculate(Cart cart) 
+    {
         CartService cartService = new CartService();
         return cartService.getSumOfCart(cart) > 200;
     }
 
     @Override
-    public void calculateOffer(Cart cart) {
+    public void calculateOffer(Cart cart) 
+    {
         Product cup = new Product("999", "kubek", 0, 0);
         cart.addNewProductToCart(cup);
     }
