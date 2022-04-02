@@ -36,5 +36,10 @@ public class Main {
         cart.applyDiscount(freeCup);
 
         System.out.println(cart.toString());
+
+        CartService cartService = new CartService();
+
+        System.out.println("Sort by name: " + cartService.sortProductsByName(cart.getProducts()));
+        System.out.println("Sort by price: " + cartService.sortProductsByPrice(cart.getProducts()));
     }
 }
